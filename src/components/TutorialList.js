@@ -36,16 +36,16 @@ const TutorialList = () => {
     setCurrentIndex(index);
   };
 
-  // const removeAllTutorials = () => {
-  //   TutorialDataService.removeAll()
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       refreshList();
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // };
+  const removeAllTutorials = () => {
+    TutorialDataService.removeAll()
+      .then((response) => {
+        console.log(response.data);
+        refreshList();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
 
   // const findByTitle = () => {
   //   TutorialDataService.findByTitle(searchTitle)
@@ -77,12 +77,12 @@ const TutorialList = () => {
               </li>
             ))}
         </ul>
-        {/* <button
+        <button
           className="m-3 btn btn-sm btn-danger"
           onClick={removeAllTutorials}
         >
           Remove All
-        </button> */}
+        </button>
       </div>
     </div>
   );
